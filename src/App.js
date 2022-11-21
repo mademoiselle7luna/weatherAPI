@@ -1,25 +1,39 @@
-import logo from './logo.svg';
+import { Component } from 'react';
 import './App.css';
 
-function App() {
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        
+      </div>
+    );
+  }
+}
+
+function show() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <div class="container">
+          <div class="app-container">
+              <div class="description">
+                  <h1>Weather API</h1>
+                  <p>Please enter your city and check the weather.</p>
+              </div>
+              <div class="form">
+                  <input class="form-city" type="text"/>
+                  <button type="button" class="btn btn-search"> Search </button>
+              </div>
+              <div class="items">
+                  <p> City: </p>
+                  <p> Temperature: </p>
+                  <p> Wind speed: </p>
+              </div>
+          </div>
+      </div>   
     </div>
   );
 }
 
-export default App;
+export default show;
