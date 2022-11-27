@@ -5,10 +5,21 @@ import './App.css';
 
 
 class App extends Component {
+
+  state = {
+    value: ""
+  }
+
+  exchangeInput = (e) => {
+    this.setState({
+      value: e.target.value
+    })
+  }
+  
   render() {
     return (
       <div className="App">
-        <Form />
+        <Form text={this.state.value} />
         <Result />
         
       </div>
