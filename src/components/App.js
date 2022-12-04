@@ -7,19 +7,34 @@ import './App.css';
 class App extends Component {
 
   state = {
-    value: ""
+    value: "",
+    date: "",
+    city: "",
+    sunrise: "",
+    sunset: "",
+    temp: "",
+    pressure: "",
+    wind: "",
+    error: "",
   }
 
-  exchangeInput = (e) => {
+  handleInputChange = (e) => {
     this.setState({
       value: e.target.value
     })
   }
   
+  handleCitySubmit = () => {
+
+  }
   render() {
     return (
       <div className="App">
-        <Form text={this.state.value} />
+        <Form 
+        value={this.state.value} 
+        change={this.handleInputChange}
+        sumbit={this.handleCitySubmit}
+        />
         <Result />
         
       </div>
