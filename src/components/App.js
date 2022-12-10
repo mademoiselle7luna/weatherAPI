@@ -24,8 +24,8 @@ class App extends Component {
     })
   }
   
-  handleCitySubmit = () => {
-
+  handleCitySubmit = (e) => {
+    e.preventDefault();
   }
   render() {
     return (
